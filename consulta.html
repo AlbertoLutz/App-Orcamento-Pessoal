@@ -15,6 +15,7 @@
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
       crossorigin="anonymous"
     ></script>
+
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
       integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
@@ -54,10 +55,10 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
+            <li class="nav-item">
               <a class="nav-link" href="index.html">Cadastro</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item active">
               <a class="nav-link" href="consulta.html">Consulta</a>
             </li>
           </ul>
@@ -66,36 +67,36 @@
     </nav>
 
     <div class="container">
-      <div class="row">
-        <div class="col mb-5">
-          <h1 class="display-4">Registro de nova despesa</h1>
+      <div class="row mb-5">
+        <div class="col">
+          <h1 class="display-4">Consulta de despesas</h1>
         </div>
       </div>
 
       <div class="row mb-2">
         <div class="col-md-2">
           <select class="form-control" id="ano">
-            <option>Ano</option>
-            <option>2022</option>
-            <option>2023</option>
+            <option value="">Ano</option>
+            <option value="2018">2022</option>
+            <option value="2018">2023</option>
           </select>
         </div>
 
         <div class="col-md-2">
           <select class="form-control" id="mes">
-            <option>Mês</option>
-            <option>Janeiro</option>
-            <option>Fevereiro</option>
-            <option>Março</option>
-            <option>Abril</option>
-            <option>Maio</option>
-            <option>Junho</option>
-            <option>Julho</option>
-            <option>Agosto</option>
-            <option>Setembro</option>
-            <option>Outubro</option>
-            <option>Novembro</option>
-            <option>Dezembro</option>
+            <option value="">Mês</option>
+            <option value="1">Janeiro</option>
+            <option value="2">Fevereiro</option>
+            <option value="3">Março</option>
+            <option value="4">Abril</option>
+            <option value="5">Maio</option>
+            <option value="6">Junho</option>
+            <option value="7">Julho</option>
+            <option value="8">Agosto</option>
+            <option value="9">Setembro</option>
+            <option value="10">Outubro</option>
+            <option value="11">Novembro</option>
+            <option value="12">Dezembro</option>
           </select>
         </div>
 
@@ -106,16 +107,16 @@
         <div class="col-md-6">
           <select class="form-control" id="tipo">
             <option>Tipo</option>
-            <option>Alimentação</option>
-            <option>Educação</option>
-            <option>Lazer</option>
-            <option>Saúde</option>
-            <option>Transporte</option>
+            <option value="1">Alimentação</option>
+            <option value="2">Educação</option>
+            <option value="3">Lazer</option>
+            <option value="4">Saúde</option>
+            <option value="5">Transporte</option>
           </select>
         </div>
       </div>
 
-      <div class="row">
+      <div class="row mb-5">
         <div class="col-md-8">
           <input
             type="text"
@@ -135,13 +136,27 @@
         </div>
 
         <div class="col-md-2 d-flex justify-content-end">
-          <button
-            type="button"
-            class="btn btn-primary"
-            onclick="cadastrarDespesa()"
-          >
-            <i class="fas fa-plus"></i>
+          <button type="button" class="btn btn-primary">
+            <i class="fas fa-search"></i>
           </button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Data</th>
+                <th>Tipo</th>
+                <th>Descrição</th>
+                <th>Valor</th>
+                <th></th>
+              </tr>
+            </thead>
+
+            <tbody></tbody>
+          </table>
         </div>
       </div>
     </div>
